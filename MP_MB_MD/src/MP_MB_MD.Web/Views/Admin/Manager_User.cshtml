@@ -16,7 +16,7 @@
 <div class="row">
     <div class="col-md-12 mt-5">
         <form action="/Admin/Manager_User" method="post">
-            @{string confirmMessage = Convert.ToString(TempData["evalution"]); string warningMessage = Convert.ToString(TempData["Examevaluationwmsg"]);}
+            @{string confirmMessage = Convert.ToString(TempData["msg"]); string warningMessage = Convert.ToString(TempData["Examevaluationwmsg"]);}
             @if (!string.IsNullOrEmpty(confirmMessage))
             {
                 <div class="alert alert-success alert-dismissable" id="divSuccessMessage">
@@ -70,7 +70,16 @@
                         </div>
                         <div class="col-md-4">
                             <label>Password</label>
-                            @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+                            @if (Model != null)
+                            {
+                                @Html.TextBoxFor(x => x.Password, new { @class = "form-control",@disabled="true" })
+                            }
+                            else
+                            { 
+                                @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+
+                        }
+
 
                         </div>
 
@@ -83,33 +92,95 @@
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-4" id="Block">
-                            <label>Block</label>
-                            @Html.DropDownListFor(x => x.Block, (IEnumerable<SelectListItem>)ViewBag.block, new { @class = "form-control", @id = "Block" })
+
+                            @if (Model != null)
+                            {
+                                @if (Model.Block != 0)
+                                {
+                                    <label>Block</label>
+                                    @Html.DropDownListFor(x => x.Block, (IEnumerable<SelectListItem>)ViewBag.block, new { @class = "form-control" })
+
+                                }
+                            }
+                            else
+                            { <label>Block</label>
+
+                                @Html.DropDownListFor(x => x.Block, (IEnumerable<SelectListItem>)ViewBag.block, new { @class = "form-control", @id = "Block" })
+                            }
+
 
                         </div>
                         <div class="col-md-4" id="Grampanchayat">
-                            <label>Grampanchayat</label>
-                            @Html.DropDownListFor(x => x.Block, (IEnumerable<SelectListItem>)ViewBag.Grampanchayat, new { @class = "form-control", @id = "Grampanchayat" })
 
+                            @if (Model != null)
+                            {
+                                @if (Model.Grampanchayat != 0)
+                                {
+                                    <label>Grampanchayat</label>
+                                    @Html.DropDownListFor(x => x.Block, (IEnumerable<SelectListItem>)ViewBag.Grampanchayat, new { @class = "form-control", @id = "Grampanchayatt" })
+
+                                }
+                            }
+                            else
+                            {
+                                <label>Grampanchayat</label>
+                                @Html.DropDownListFor(x => x.Block, (IEnumerable<SelectListItem>)ViewBag.Grampanchayat, new { @class = "form-control", @id = "Grampanchayat" })
+                            }
                         </div>
                         <div class="col-md-4" id="Department_Id">
-                            <label>Department</label>
-                            @Html.DropDownListFor(x => x.Department_Id, (IEnumerable<SelectListItem>)ViewBag.department, new { @class = "form-control", @id = "Department_Id" })
+
+                            @if (Model != null)
+                            {
+                                @if (Model.Department_Id != 0)
+                                {
+                                    <label>Department</label>
+                                    @Html.DropDownListFor(x => x.Department_Id, (IEnumerable<SelectListItem>)ViewBag.department, new { @class = "form-control", @id = "Department_Idd" })
+
+
+                                }
+                            }
+                            else
+                            {
+                                <label>Department</label>
+                                @Html.DropDownListFor(x => x.Department_Id, (IEnumerable<SelectListItem>)ViewBag.department, new { @class = "form-control", @id = "Department_Id" })
+
+                            }
 
                         </div>
                         <div class="col-md-4" id="Department_Desc">
-                            <label>Department name</label>
-                            @Html.TextBoxFor(x => x.Department_Desc, new { @class = "form-control", @id = "Department_Desc" })
+
+                            @if (Model != null)
+                            {
+                                @if (Model.Departmentname != null)
+                                {<label>Department name</label>
+                                    @Html.TextBoxFor(x => x.Department_Desc, new { @class = "form-control", @id = "Department_Descc" })
+
+                                }
+                            }
+                            else
+                            {
+                                <label>Department name</label>
+                                @Html.TextBoxFor(x => x.Department_Desc, new { @class = "form-control", @id = "Department_Desc" })
+
+                            }
                         </div>
-
-
+                        <input type="hidden" value="@Model" id="modelid" />
+                        @Html.HiddenFor(x=>x.User_Id)
                     </div>
 
 
                     <div class="row mt-lg-4 mr-1">
                         <div class="col-md-9"></div>
                         <div class="col-md-3" style="text-align:right;">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            @if (Model != null)
+                            {
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            }
+                            else
+                            {
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            }
+
                             <button class="btn btn-danger">Cancel</button>
                         </div>
                     </div>
@@ -131,11 +202,22 @@
 <script>
 
     $(document).ready(function () {
-        $("#Block").hide();
-        $("#Grampanchayat").hide();
-        $("#Department_Id").hide();
-        $("#Department_Desc").hide();
-        
+        var model = $("#modelid").val();
+        if (model != null || model != "") {
+            $("#Block").show();
+            $("#Grampanchayat").show();
+            $("#Department_Id").show();
+            $("#Department_Desc").show();
+
+        }
+        else {
+            $("#Block").hide();
+            $("#Grampanchayat").hide();
+            $("#Department_Id").hide();
+            $("#Department_Desc").hide();
+
+        }
+     
     });
 
     function Dropchange() {
@@ -163,10 +245,19 @@
 
         }
         else if (data == 5) {
+            $("#Block").hide();
             $("#Department_Id").show();
             $("#Department_Desc").show();
 
         }
+        else if (data == 6) {
+            $("#Block").hide();
+            $("#Grampanchayat").hide();
+            $("#Department_Id").hide();
+            $("#Department_Desc").hide();
 
+        }
+
+      
     }
 </script>

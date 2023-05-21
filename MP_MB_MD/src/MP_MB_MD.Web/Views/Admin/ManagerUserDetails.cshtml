@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<MP_MB_MD.Core.Modal.Manage_UserModel>
 @{
     ViewData["Title"] = "ManagerUserDetails";
     Layout = "~/Views/Shared/_MasterLayout.cshtml";
@@ -19,22 +19,33 @@
                             <th>Email Id</th>
                             <th>User Name</th>
 
-
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @if (Model != null)
+                        {
+                            int count = 0;
+                            foreach (var iteam in Model)
+                            {
+                                count = count + 1;
 
                         <tr>
-                            <td>1</td>
-                            <td>BDO</td>
-                            <td>Rajesh Jena</td>
+                            <td>@count</td>
+                            <td>@iteam.UserTypename</td>
+                            <td>@iteam.Name</td>
 
-                            <td>7008535529</td>
-                            <td>rk@gmail.com</td>
-                            <td>rajesh_123</td>
+                            <td>@iteam.Mobile_no</td>
+                            <td>@iteam.Email_Id</td>
+                            <td>@iteam.User_name</td>
+                           
+                            <td>
+                                <a href="/Admin/Manager_User?id=@iteam.User_Id" class=""><i class="fa fa-edit"></i>Edit</a>
+              
+                            </td>
                         </tr>
-
-
+                            }
+                        }
                     </tbody>
                 </table>
                 <div class="row mt-lg-4 mr-1">

@@ -628,11 +628,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DhenkaNal\\MP_MB_MD\\MPMBMD\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj",
+      "projectUniqueName": "D:\\MPMBMD_Git\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj",
       "projectName": "MP_MB_MD.SharedKernel",
-      "projectPath": "C:\\DhenkaNal\\MP_MB_MD\\MPMBMD\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj",
+      "projectPath": "D:\\MPMBMD_Git\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj",
       "packagesPath": "C:\\Users\\devip\\.nuget\\packages\\",
-      "outputPath": "C:\\DhenkaNal\\MP_MB_MD\\MPMBMD\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\obj\\",
+      "outputPath": "D:\\MPMBMD_Git\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -647,6 +647,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

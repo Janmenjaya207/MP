@@ -34,3 +34,14 @@ C:\DhenkaNal\MP_MB_MD\MPMBMD\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0
 C:\DhenkaNal\MP_MB_MD\MPMBMD\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.pdb
 C:\DhenkaNal\MP_MB_MD\MPMBMD\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\ref\MP_MB_MD.SharedKernel.dll
 C:\DhenkaNal\MP_MB_MD\MPMBMD\MP_MB_MD\src\MP_MB_MD.SharedKernel\bin\Debug\net5.0\ref\MP_MB_MD.SharedKernel.dll
+D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\bin\Debug\net5.0\MP_MB_MD.SharedKernel.deps.json
+D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\bin\Debug\net5.0\MP_MB_MD.SharedKernel.dll
+D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\bin\Debug\net5.0\ref\MP_MB_MD.SharedKernel.dll
+D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\bin\Debug\net5.0\MP_MB_MD.SharedKernel.pdb
+D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.AssemblyInfoInputs.cache
+D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.AssemblyInfo.cs
+D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.csproj.CoreCompileInputs.cache
+D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.dll
+D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\ref\MP_MB_MD.SharedKernel.dll
+D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.pdb

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MP_MB_MD.Core.ProjectAggregate.Entity
 {
-    public class Manage_User: IAggregateRoot
+    public class Manage_User : IAggregateRoot
     {
         [Key]
         public int User_Id { get; set; }
@@ -25,10 +25,11 @@ namespace MP_MB_MD.Core.ProjectAggregate.Entity
         public string ModifiedBy { get; set; }
         public DateTime? ModifiedOn { get; set; }
 
-        public int ?Department_Id { get; set; }
-        public string ? Department_NameDescription { get; set; }
+        public int? Department_Id { get; set; }
+        public string Department_NameDescription { get; set; }
 
         public bool? IsActive { get; set; }
         public bool? Isdelete { get; set; }
+
     }
 }

@@ -22,11 +22,14 @@ namespace MP_MB_MD.Web.Controllers
             this.repositoryInterface = _repositoryInterface;
             this.con = obj;
         }
+        public IActionResult Index()
+        {
+            return View();
+        }
         public IActionResult DashBoard()
         {
             return View();
         }
-
         public IActionResult Grievance(int? id=0)
         {
             if(id!=0)

@@ -23,5 +23,6 @@ namespace MP_MB_MD.Core.Modal
         public string Blockname { get; set; }
             public string grampanchayatnaME { get;set;}
         public string Departmentname { get; set; }
+        public string UserTypename { get; set; }
     }
 }

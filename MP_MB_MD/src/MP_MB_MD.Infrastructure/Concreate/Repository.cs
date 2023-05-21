@@ -83,6 +83,12 @@ namespace MP_MB_MD.Infrastructure.Concreate
                         grievance.Attachment = ee.Attachment;
                         grievance.IsActive = true;
                         grievance.IsDelete = false;
+                        grievance.Grievance_status = (int)StatusModel.Status.Pending;
+
+
+
+
+
                         con.Grievance.Add(grievance);
                         con.SaveChanges();
                         transaction.Commit();
@@ -107,44 +113,62 @@ namespace MP_MB_MD.Infrastructure.Concreate
 
         public int SaveMangeUser(Manage_UserModel adminModel)
         {
-            Manage_User mnguser = new Manage_User();
-            mnguser.Name = adminModel.Name;
-            mnguser.Email_Id = adminModel.Email_Id;
-            mnguser.Mobile_no = adminModel.Mobile_no;
-            mnguser.User_Type = adminModel.User_Type;
-            mnguser.Block = adminModel.Block;
-            mnguser.Grampanchayat = adminModel.Grampanchayat;
-            mnguser.Password = MainModel.EncodeBase64(adminModel.Password);
-            mnguser.User_name = adminModel.User_name;
-            con.Manage_User.Add(mnguser);
-            con.SaveChanges();
-           
-            string sub = "Username & Password Credential";
-            var body = new StringBuilder();
-            body.AppendFormat("Dear {0}\n", mnguser.Name + ",");
-            //body.AppendFormat("Dear Candidate,");
-            body.AppendLine("<br/>");
+            if(adminModel.User_Id!=0)
+                {
+                var data = con.Manage_User.Where(x => x.User_Id == adminModel.User_Id).FirstOrDefault();
 
-            body.AppendLine(@"Your User Name Is" + ": " + "" + mnguser.User_name + " & Password Is:" + MainModel.DecodeBase64(mnguser.Password) + ".");
-            body.AppendLine("<br/>");
-            body.AppendLine(@"Use This Login Credential For LogIn Purpose");
-            body.AppendLine("<br/>");
-            body.AppendLine(@"<a href =''></a>");
-            body.AppendLine("<br/>");
-            body.AppendLine("<br/>");
-            body.AppendLine("<br/>");
-            body.Append("<b>");
-            body.Append("Regards,");
-            body.AppendLine("<br/>");
-            body.Append("APICOL");
-            body.Append("</b>");
+                data.Name = adminModel.Name;
+                data.Email_Id = adminModel.Email_Id;
+                data.Mobile_no = adminModel.Mobile_no;
+                data.User_Type = adminModel.User_Type;
+                data.Block = adminModel.Block;
+                data.Grampanchayat = adminModel.Grampanchayat;
+                con.SaveChanges();
+                return 2;
+            }
+            else
+            {
+                Manage_User mnguser = new Manage_User();
+                mnguser.Name = adminModel.Name;
+                mnguser.Email_Id = adminModel.Email_Id;
+                mnguser.Mobile_no = adminModel.Mobile_no;
+                mnguser.User_Type = adminModel.User_Type;
+                mnguser.Block = adminModel.Block;
+                mnguser.Grampanchayat = adminModel.Grampanchayat;
+                mnguser.Password = MainModel.EncodeBase64(adminModel.Password);
+                mnguser.User_name = adminModel.User_name;
+                mnguser.IsActive = true;
+                con.Manage_User.Add(mnguser);
+                con.SaveChanges();
 
-            body.AppendLine("<br/>");
+                string sub = "Username & Password Credential";
+                var body = new StringBuilder();
+                body.AppendFormat("Dear {0}\n", mnguser.Name + ",");
+                //body.AppendFormat("Dear Candidate,");
+                body.AppendLine("<br/>");
+
+                body.AppendLine(@"Your User Name Is" + ": " + "" + mnguser.User_name + " & Password Is:" + MainModel.DecodeBase64(mnguser.Password) + ".");
+                body.AppendLine("<br/>");
+                body.AppendLine(@"Use This Login Credential For LogIn Purpose");
+                body.AppendLine("<br/>");
+                body.AppendLine(@"<a href =''></a>");
+                body.AppendLine("<br/>");
+                body.AppendLine("<br/>");
+                body.AppendLine("<br/>");
+                body.Append("<b>");
+                body.Append("Regards,");
+                body.AppendLine("<br/>");
+                body.Append("APICOL");
+                body.Append("</b>");
+
+                body.AppendLine("<br/>");
 
 
-            string mailbodyy = body.ToString();
-            SendMail(mnguser.Email_Id, sub, body.ToString());
-            return 1;
+                string mailbodyy = body.ToString();
+                SendMail(mnguser.Email_Id, sub, body.ToString());
+                return 1;
+            }
+          
         }
 
     }

@@ -12,7 +12,7 @@ namespace MP_MB_MD.Core.ProjectAggregate.Entity
     {
         [Key]
         public int Id { get; set; }
-        public int User_Id { get; set; }
+        public int? User_Id { get; set; }
         public string Name_Of_Applicant { get; set; }
         public string FatherOrHusbandName { get; set; }
         public string MobileNo { get; set; }
@@ -28,5 +28,9 @@ namespace MP_MB_MD.Core.ProjectAggregate.Entity
         public string CreatedBy { get; set; }
         public bool? IsActive { get; set; }
         public bool? IsDelete { get; set; }
+        public int? Grievance_status { get; set; }
+
+        public string Grievance_Code { get; set; }
     }
 }
+
