@@ -1,0 +1,118 @@
+
+
+.dance {
+    position: absolute;
+    bottom: -45px;
+    width: 36%;
+    z-index: 1;
+    opacity: 0.5;
+    left: 200px;
+}
+/* Large desktop :1920px. */
+@media (min-width: 1920px) {
+   
+
+}
+
+.form_top {
+    margin-top: -110px;
+}
+
+
+
+/* Normal desktop :992px. */
+@media (max-width: 1440px) {
+    .form_top {
+        margin-top: -164px;
+    }
+
+   
+    .text-md-start {
+        text-align: center !important;
+    }
+   .dance {
+   width: 51%;
+   left: 94px;
+}
+
+}
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .govt {
+        width: 82%;
+    }
+    .naveen_logo {
+        left: -34px;
+        width: 192px;
+    }
+    .form_top {
+        margin-top: -220px;
+    }
+    .dance {
+        position: absolute;
+        bottom: -39px;
+        left: 87px;
+        width: 48%;
+       
+    }
+    .captcha_image{
+        width:55% !important;
+    }
+    .fsize {
+        font-size: 30px;
+    }
+    .mb-5 {
+        margin-bottom: 0px !important;
+    }
+    .footer_p {
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+/* Large Mobile :480px. */
+@media(max-width: 767px) {
+
+    .govt {
+        width: 100%;
+    }
+    .dance {
+        position: absolute;
+        bottom: -38px;
+        width: 260px;
+       
+    }
+    .fsize {
+        font-size: 14px;
+    }
+    .py-6 {
+       
+        padding-bottom: 3rem !important;
+    }
+
+    .naveen_logo {
+        position: relative;
+        left: 43px;
+        width: 72%;
+    }
+    .form_top {
+        margin-top: -124px;
+    }
+    .mb-5 {
+        margin-bottom: 0px !important;
+    }
+    .fivet {
+        margin-top: 20px !important;
+    }
+    .captcha_image {
+        width: 50% !important;
+    }
+    .footer_p{
+        text-align:center;
+        font-size:14px;
+
+    }
+}

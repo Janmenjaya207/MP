@@ -1,0 +1,128 @@
+﻿@model IEnumerable<MP_MB_MD.Core.ProjectAggregate.Entity.Grievance>
+@{
+    ViewData["Title"] = "Grievance_list";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 mt-5">
+        <form action="/So/Exam_Evaluation" method="post">
+            @{string confirmMessage = Convert.ToString(TempData["evalution"]); string warningMessage = Convert.ToString(TempData["Examevaluationwmsg"]);}
+            @if (!string.IsNullOrEmpty(confirmMessage))
+            {
+                <div class="alert alert-success alert-dismissable" id="divSuccessMessage">
+                    <input type="hidden" id="messagealert" value="@confirmMessage" />
+                    @confirmMessage
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                </div>
+            }
+            else if (!string.IsNullOrEmpty(warningMessage))
+            {
+                <div class="alert alert-warning alert-dismissable" id="divSuccessMessage">
+                    <input type="hidden" id="messagealert" value="@warningMessage" />
+                    @warningMessage
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                </div>
+            }
+            else
+            {
+                <input type="hidden" id="messagealert" value="0" />
+            }
+
+            <div class="card m-b-30">
+                <h4 class="card-header mt-0">Search Parameter</h4>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Status</label>
+                            <select class="form-control">
+                                <option>--Select--</option>
+                                <option>Pending</option>
+                                <option>Resolved</option>
+                                <option>Discard</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row mt-lg-4 mr-1">
+                        <div class="col-md-9"></div>
+                        <div class="col-md-3" style="text-align:right;">
+                            <button class="btn btn-primary">Search</button>
+                            <button class="btn btn-danger">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12 mt-5">
+                    <div class="card m-b-30">
+                        <div class="card-body">
+                            <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <thead>
+                                    <tr>
+
+                                        <th>SI No</th>
+                                        <th>Name Of Applicant</th>
+                                        <th>Father /Husband Name</th>
+                                        <th>Mobile No</th>
+                                        <th>Email Id</th>
+                                        <th>Village Name</th>
+                                        <th>Pin Code</th>
+                                        <th>Attachment</th>
+                                        <th>Details Of Consern</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model != null)
+                                    {
+                                        int count = 0;
+                                        foreach (var iteam in Model)
+                                        {
+                                            count = count + 1;
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>@iteam.Name_Of_Applicant</td>
+                                        <td>@iteam.FatherOrHusbandName</td>
+                                        <td>@iteam.MobileNo</td>
+                                        <td>@iteam.Email_Id</td>
+                                        <td>@iteam.VillageName</td>
+                                        <td>@iteam.Pincode</td>
+                                        <td><a href="@iteam.Attachment" target="_blank">View</a></td>
+                                        <td>@iteam.Details_Of_Consern</td>
+                                        <th style="color:blue">Pending</th>
+                                        <td>
+                                            <a href="/PEO/Grievance?id=@iteam.Id" class=""><i class="fa fa-edit"></i>Edit</a>
+                                            <a href="/PEO/DeleteGrivance?id=@iteam.Id" class=""><i class="fa fa-trash" style="color:red;padding-left:12px;" onclick="return confirm('Are you sure want to delete this Occupation Details ?')"></i>Delete</a>
+                                        </td>
+                                    </tr>
+                                        }
+                                     
+                                    }
+
+                                </tbody>
+                            </table>
+                            <div class="row mt-lg-4 mr-1">
+                                <div class="col-md-11"></div>
+                                <div class="col-md-1">
+                                    <a href="/AEHUB/BatchDetails"><button class="btn btn-primary">Back</button></a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="cover-spin"></div>
+        </form>
+    </div>
+</div>
+
