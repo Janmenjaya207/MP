@@ -24,7 +24,12 @@ namespace MP_MB_MD.Web.Controllers
         {
             return View();
         }
-
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            //return RedirectToAction("LoginUser");
+            return RedirectToAction("LoginUser", "LogIn");
+        }
         [HttpGet]
         public IActionResult LoginUser()
         {
@@ -51,7 +56,7 @@ namespace MP_MB_MD.Web.Controllers
                 if (user.User_Type.ToString() == "1")
                 {
                     
-                    return RedirectToAction("DashBord", "Admin");
+                    return RedirectToAction("DashBoard", "Admin");
                 }
                 else if (user.User_Type.ToString() == "2")
                 {

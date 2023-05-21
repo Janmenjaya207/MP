@@ -138,6 +138,7 @@ namespace MP_MB_MD.Infrastructure.Concreate
                 mnguser.Password = MainModel.EncodeBase64(adminModel.Password);
                 mnguser.User_name = adminModel.User_name;
                 mnguser.IsActive = true;
+                mnguser.Isdelete = false;
                 con.Manage_User.Add(mnguser);
                 con.SaveChanges();
 

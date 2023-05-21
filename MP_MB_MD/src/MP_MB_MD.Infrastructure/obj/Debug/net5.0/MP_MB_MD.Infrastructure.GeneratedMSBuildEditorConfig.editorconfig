@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = MP_MB_MD.Infrastructure
-build_property.ProjectDir = D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.Infrastructure\
+build_property.ProjectDir = C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.Infrastructure\

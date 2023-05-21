@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MPMBMD_Git\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj": {}
+    "C:\\MP_MD\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj": {}
   },
   "projects": {
-    "D:\\MPMBMD_Git\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj": {
+    "C:\\MP_MD\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MPMBMD_Git\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj",
+        "projectUniqueName": "C:\\MP_MD\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj",
         "projectName": "MP_MB_MD.SharedKernel",
-        "projectPath": "D:\\MPMBMD_Git\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj",
+        "projectPath": "C:\\MP_MD\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj",
         "packagesPath": "C:\\Users\\devip\\.nuget\\packages\\",
-        "outputPath": "D:\\MPMBMD_Git\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\obj\\",
+        "outputPath": "C:\\MP_MD\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

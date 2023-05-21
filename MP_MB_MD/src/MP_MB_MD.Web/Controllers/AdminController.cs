@@ -41,6 +41,7 @@ namespace MP_MB_MD.Web.Controllers
         {
             return View();
         }
+      
         public IActionResult Manager_User(int id)
         {
             if (id != 0)
@@ -194,7 +195,7 @@ namespace MP_MB_MD.Web.Controllers
                 if (count== 1)
                 {
                     TempData["msg"] = "<script>alert('Manage User Created Successfully')</script>";
-                    return RedirectToAction("Manager_User", "Admin");
+                    return RedirectToAction("ManagerUserDetails", "Admin");
 
                 }
                 else
@@ -239,7 +240,24 @@ namespace MP_MB_MD.Web.Controllers
 
             return View(appDtl);
         }
-          
 
+        [HttpPost]
+        public JsonResult GetGrampanchayats(int blockId)
+        {
+            var data3 = con.Gram_Panchayat.Where(x => x.Block_Ulb_Id == blockId).ToList();
+            List<SelectListItem> li4 = new List<SelectListItem>();
+
+            foreach (var item in data3)
+            {
+                li4.Add(new SelectListItem
+                {
+                    Text = item.GRAM_PANCHAYAT_Name,
+                    Value = item.GarmPanchayat_Id.ToString(),
+                });
+            }
+
+            var options = li4.Select(x => new { value = x.Value, text = x.Text });
+            return Json(options);
+        }
     }
 }

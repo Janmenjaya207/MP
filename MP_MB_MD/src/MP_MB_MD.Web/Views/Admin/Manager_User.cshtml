@@ -51,13 +51,13 @@
 
                         <div class="col-md-4">
                             <label>Name:</label>
-                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @required = "true", @autocomplete = "off", id = "Name" })
 
                         </div>
 
                         <div class="col-md-4">
                             <label>Mobile No</label>
-                            @Html.TextBoxFor(x => x.Mobile_no, new { @class = "form-control", @type = "number" })
+                            @Html.TextBoxFor(x => x.Mobile_no, new { @class = "form-control", @type = "number", @required = "true", @autocomplete = "off", id = "Mobile_no" })
                         </div>
                     </div>
 
@@ -65,18 +65,18 @@
                     <div class="row mt-2">
                         <div class="col-md-4">
                             <label>User Name</label>
-                            @Html.TextBoxFor(x => x.User_name, new { @class = "form-control" })
+                            @Html.TextBoxFor(x => x.User_name, new { @class = "form-control", @required = "true", @autocomplete = "off", id = "User_name" })
 
                         </div>
                         <div class="col-md-4">
                             <label>Password</label>
                             @if (Model != null)
                             {
-                                @Html.TextBoxFor(x => x.Password, new { @class = "form-control",@disabled="true" })
+                                @Html.TextBoxFor(x => x.Password, new { @class = "form-control",@disabled="true", @autocomplete = "off", })
                             }
                             else
                             { 
-                                @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+                                @Html.TextBoxFor(x => x.Password, new { @class = "form-control", @autocomplete = "off" })
 
                         }
 
@@ -85,7 +85,7 @@
 
                         <div class="col-md-4">
                             <label>Email Id</label>
-                            @Html.TextBoxFor(x => x.Email_Id, new { @class = "form-control" })
+                            @Html.TextBoxFor(x => x.Email_Id, new { @class = "form-control", @required = "true", @autocomplete = "off", id = "Email" })
 
                         </div>
 
@@ -105,7 +105,7 @@
                             else
                             { <label>Block</label>
 
-                                @Html.DropDownListFor(x => x.Block, (IEnumerable<SelectListItem>)ViewBag.block, new { @class = "form-control", @id = "Block" })
+                                @Html.DropDownListFor(x => x.Block, (IEnumerable<SelectListItem>)ViewBag.block, new { @class = "form-control", @id = "Block1" })
                             }
 
 
@@ -117,14 +117,14 @@
                                 @if (Model.Grampanchayat != 0)
                                 {
                                     <label>Grampanchayat</label>
-                                    @Html.DropDownListFor(x => x.Block, (IEnumerable<SelectListItem>)ViewBag.Grampanchayat, new { @class = "form-control", @id = "Grampanchayatt" })
+                                    @Html.DropDownListFor(x => x.Grampanchayat, (IEnumerable<SelectListItem>)ViewBag.Grampanchayat, new { @class = "form-control", @id = "Grampanchayatt" })
 
                                 }
                             }
                             else
                             {
                                 <label>Grampanchayat</label>
-                                @Html.DropDownListFor(x => x.Block, (IEnumerable<SelectListItem>)ViewBag.Grampanchayat, new { @class = "form-control", @id = "Grampanchayat" })
+                                @Html.DropDownListFor(x => x.Grampanchayat, (IEnumerable<SelectListItem>)ViewBag.Grampanchayat, new { @class = "form-control", @id = "Grampanchayat1" })
                             }
                         </div>
                         <div class="col-md-4" id="Department_Id">
@@ -142,7 +142,7 @@
                             else
                             {
                                 <label>Department</label>
-                                @Html.DropDownListFor(x => x.Department_Id, (IEnumerable<SelectListItem>)ViewBag.department, new { @class = "form-control", @id = "Department_Id" })
+                                @Html.DropDownListFor(x => x.Department_Id, (IEnumerable<SelectListItem>)ViewBag.department, new { @class = "form-control", @id = "Department_Id1" })
 
                             }
 
@@ -160,7 +160,7 @@
                             else
                             {
                                 <label>Department name</label>
-                                @Html.TextBoxFor(x => x.Department_Desc, new { @class = "form-control", @id = "Department_Desc" })
+                                @Html.TextBoxFor(x => x.Department_Desc, new { @class = "form-control", @id = "Department_Desc1" })
 
                             }
                         </div>

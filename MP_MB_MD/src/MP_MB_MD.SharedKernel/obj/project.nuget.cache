@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U6znHg0a0KvezQlcarkg4nhRxyRuUzk1EjHgQbPC/klFgduLl3disbU8zwbbh9THFGOtLcBd9zyVfZOJcCYopw==",
+  "dgSpecHash": "Kiy5vlg307K+0xzn7AcOdd1uKI7xihzvDL8dS661Lbr2XYD58pMN/iWGlckmhcfHngl8gUBltlKd3QJg2AUlFg==",
   "success": true,
-  "projectFilePath": "D:\\MPMBMD_Git\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj",
+  "projectFilePath": "C:\\MP_MD\\MP\\MP_MB_MD\\src\\MP_MB_MD.SharedKernel\\MP_MB_MD.SharedKernel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devip\\.nuget\\packages\\ardalis.guardclauses\\3.1.0\\ardalis.guardclauses.3.1.0.nupkg.sha512",
     "C:\\Users\\devip\\.nuget\\packages\\ardalis.specification\\5.1.0\\ardalis.specification.5.1.0.nupkg.sha512",

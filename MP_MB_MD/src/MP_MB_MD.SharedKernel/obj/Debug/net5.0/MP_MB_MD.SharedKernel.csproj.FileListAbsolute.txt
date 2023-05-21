@@ -45,3 +45,15 @@ D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.Sh
 D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.dll
 D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\ref\MP_MB_MD.SharedKernel.dll
 D:\MPMBMD_Git\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.pdb
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\bin\Debug\net5.0\MP_MB_MD.SharedKernel.deps.json
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\bin\Debug\net5.0\MP_MB_MD.SharedKernel.dll
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\bin\Debug\net5.0\ref\MP_MB_MD.SharedKernel.dll
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\bin\Debug\net5.0\MP_MB_MD.SharedKernel.pdb
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.csproj.AssemblyReference.cache
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.AssemblyInfoInputs.cache
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.AssemblyInfo.cs
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.csproj.CoreCompileInputs.cache
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.dll
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\ref\MP_MB_MD.SharedKernel.dll
+C:\MP_MD\MP\MP_MB_MD\src\MP_MB_MD.SharedKernel\obj\Debug\net5.0\MP_MB_MD.SharedKernel.pdb
